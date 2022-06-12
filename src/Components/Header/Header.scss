@@ -1,0 +1,58 @@
+@use '../../styles/variables';
+
+.header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 1rem;
+  padding: 1rem;
+  color: #fff;
+  background-color: variables.$soft-red;
+
+  @media screen and (max-width: 1440px) {
+    padding: 1.5rem;
+  }
+
+  .info-container {
+    width: 100%;
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: space-between;
+    flex-direction: column;
+
+    .balance-text {
+      font-size: .75rem;
+    }
+
+    .balance-num {
+      font-size: 1.25rem;
+      font-weight: 700;
+    }
+  }
+
+  .ball-container {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+
+    .ball {
+      width: 40px;
+      height: 40px;
+      background-color: #000;
+      border-radius: 50%;
+      position: absolute;
+    }
+
+    .hollow {
+      background-color: transparent;
+      border: 1px solid #fff;
+      right: 20px;
+      z-index: 1;
+    }
+  }
+
+}
