@@ -4,10 +4,10 @@
   margin-top: 20px;
   background-color: #fff;
   border-radius: 1rem;
-  padding: 1rem;
+  padding: 2rem 1.5rem;
 
   .title {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     font-weight: bold;
     margin-bottom: 1rem;
   }
@@ -23,7 +23,6 @@
     display: flex;
     justify-content: space-between;
     color: #b2aba5;
-    font-size: .75rem;
     height: max-content;
 
     div {
@@ -41,11 +40,68 @@
 
     .value {
       &:last-child {
-        font-size: 1.5rem;
+        font-size: 2rem;
       }
 
       font-weight: bold;
       color: #000;
     }
+
   }
+
+  .bar-chart-container {
+    height: 230px;
+
+    @media screen and (max-width: 375px) {
+      height: 200px;
+    }
+
+  }
+
+
+  .tooltip {
+    background-color: #382314;
+    padding: .5rem;
+    color: white;
+    border-radius: 5px;
+  }
+
+  .recharts-bar-rectangle {
+
+    .recharts-rectangle {
+      fill: variables.$soft-red;
+
+      &:hover {
+        fill: lighten(variables.$soft-red, 10%);
+      }
+    }
+
+    .highest {
+      fill: variables.$cyan;
+
+      &:hover {
+        fill: lighten(variables.$cyan, 10%);
+      }
+    }
+  }
+
+
+  @media screen and (max-width: 375px) {
+    padding: 2rem 1rem;
+
+    .graph-analytics {
+      font-size: .75rem;
+
+      .value {
+        &:last-child {
+          font-size: 1.5rem;
+        }
+      }
+    }
+
+    .title {
+      font-size: 1.25rem;
+    }
+  }
+
 }
