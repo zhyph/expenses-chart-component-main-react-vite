@@ -1,0 +1,51 @@
+@use '../../styles/variables';
+
+.body-container {
+  margin-top: 20px;
+  background-color: #fff;
+  border-radius: 1rem;
+  padding: 1rem;
+
+  .title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+
+  hr:first-of-type {
+    background-color: variables.$cream;
+    border: none;
+    height: 1px;
+    margin: 1.25rem 0
+  }
+
+  .graph-analytics {
+    display: flex;
+    justify-content: space-between;
+    color: #b2aba5;
+    font-size: .75rem;
+    height: max-content;
+
+    div {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      gap: 10px;
+
+      &:last-child {
+        align-items: flex-end;
+        gap: 5px;
+        justify-content: flex-end;
+      }
+    }
+
+    .value {
+      &:last-child {
+        font-size: 1.5rem;
+      }
+
+      font-weight: bold;
+      color: #000;
+    }
+  }
+}
