@@ -1,3 +1,4 @@
+import Analytics from './Analytics';
 import React, { useEffect } from 'react';
 import './Body.scss';
 import {
@@ -90,16 +91,7 @@ const Body: React.FC = () => {
         </ResponsiveContainer>
       </div>
       <hr />
-      <div className="graph-analytics">
-        <div>
-          <p>Total this month</p>
-          <p className="value">$478.33</p>
-        </div>
-        <div>
-          <p className="value">+2.4%</p>
-          <p>from last month</p>
-        </div>
-      </div>
+      <Analytics />
     </div>
   );
 };
