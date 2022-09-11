@@ -12,9 +12,8 @@
   .control-width {
     width: 35%;
 
-    @media screen and (max-width: 375px) {
-      width: 90%;
+    @media screen and (max-width: 1024px) {
+      width: 80vw;
     }
-
   }
 }
