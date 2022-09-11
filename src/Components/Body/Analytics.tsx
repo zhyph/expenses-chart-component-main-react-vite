@@ -9,7 +9,7 @@ export default function Analytics({}) {
       </div>
       <div>
         <p className="value">+2.4%</p>
-        <p>from last month</p>
+        <p>from last month </p>
       </div>
     </div>
   );
