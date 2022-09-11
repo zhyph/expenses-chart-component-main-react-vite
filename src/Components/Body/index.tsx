@@ -11,15 +11,14 @@ import {
 } from 'recharts';
 import data from '../../../resources/data.json';
 
-//  data: { day: string; amount: number; highest?: boolean | undefined }[]
-interface dataType {
+interface DataType {
   day: string;
   amount: number;
-  highest?: boolean | undefined;
+  highest?: boolean;
 }
 
 const Body: React.FC = () => {
-  const [dataState, setDataState] = React.useState<dataType[]>([]);
+  const [dataState, setDataState] = React.useState<DataType[]>([]);
   const [mousePos, setMousePos] = React.useState<{
     x?: number;
     y?: number;
@@ -29,7 +28,7 @@ const Body: React.FC = () => {
     setDataState(findMaxAndMutateObjAtt(data));
   }, []);
 
-  const findMaxAndMutateObjAtt = (data: dataType[]) => {
+  const findMaxAndMutateObjAtt = (data: DataType[]) => {
     const max = data.reduce((a, b) => (a.amount > b.amount ? a : b));
     data.forEach((obj) => {
       if (obj.amount === max.amount) {

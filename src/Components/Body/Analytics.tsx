@@ -1,6 +1,7 @@
 import React from 'react';
 
-export default function Analytics({}) {
+// TODO: Pass values from props
+export default function Analytics() {
   return (
     <div className="graph-analytics">
       <div>
