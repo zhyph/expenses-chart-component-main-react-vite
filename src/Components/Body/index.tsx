@@ -66,7 +66,13 @@ const Body: React.FC = () => {
             </Bar>
             <Tooltip
               content={({ active, payload }) => {
-                if (active && payload && payload.length)
+                const valid =
+                  active &&
+                  payload &&
+                  payload.length &&
+                  Object.keys(mousePos).length;
+
+                if (valid)
                   return (
                     <div className="tooltip">
                       <p>{`$${payload[0].value}`}</p>
