@@ -40,7 +40,7 @@ const Body: React.FC = () => {
 
   return (
     <div className="body-container">
-      <p className="title">Spending - Last 7 days</p>
+      <p className="title">Spending - Last 7 days </p>
       <div className="bar-chart-container">
         <ResponsiveContainer width="100%" height="100%">
           <BarChart margin={{ top: 40 }} data={dataState}>
